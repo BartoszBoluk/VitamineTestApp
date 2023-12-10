@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">VitamineTestApp</string>
+    <string name="Title">Aplikacja do diagnozy niedoboru witamin</string>
+    <string name="startButtontext">Start</string>
+    <string name="buttonInfoText">Informacje</string>
+    <string name="TextViewInfo">Działanie aplikacji:\n1) Wybierz część ciała\n2) Odpowiedz na pytania\n3) Zobacz wynik</string>
+    <string name="HairButtonText">Włosy</string>
+    <string name="EyesButtonText">Oczy</string>
+    <string name="LipsButtonText">Usta</string>
+    <string name="HairQ1Text">Czy masz łupież?</string>
+    <string name="CheckBoxYes">Tak</string>
+    <string name="CheckBoxNo">Nie</string>
+    <string name="ButtonNextText">Następne Pytanie</string>
+    <string name="emptyText">Test</string>
+    <string name="eyeQ1Text">Czy masz podkrążone oczy?</string>
+    <string name="eyeQ2Text">Czy masz suche oczy?</string>
+    <string name="HairQ2Text">Czy wypadają ci włosy?</string>
+    <string name="HairQ3Text">Czy masz włosy łamiace sie i wolno rosnące</string>
+    <string name="HairQ4Text">Czy masz suche włosy?</string>
+    <string name="LipsQ1Text">Czy pojawiają Ci się afty?</string>
+    <string name="LipsQ2Text">Czy często masz nieświeży oddech?</string>
+    <string name="LipsQ3Text">Czy masz pęknięcia w kącichach ust?</string>
+</resources>
