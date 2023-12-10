@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 
 import com.example.vitaminetestapp.R;
-import com.example.vitaminetestapp.eyequestions.EyeResultActivity;
 
 import java.util.ArrayList;
 
