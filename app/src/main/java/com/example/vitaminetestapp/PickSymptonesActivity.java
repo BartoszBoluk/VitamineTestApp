@@ -10,10 +10,9 @@ import android.widget.Button;
 import com.example.vitaminetestapp.eyequestions.EyeQ1Activity;
 import com.example.vitaminetestapp.hairquestions.HairQ1Activity;
 import com.example.vitaminetestapp.lipsquestions.LipsQ1Activity;
-
 public class PickSymptonesActivity extends AppCompatActivity {
 
-    private Button mButtonHair, mButtonEyes, mButtonLips;
+    private Button mButtonHair, mButtonEyes, mButtonLips, mButtonBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +22,7 @@ public class PickSymptonesActivity extends AppCompatActivity {
         mButtonHair = findViewById(R.id.mButtonHair);
         mButtonEyes = findViewById(R.id.mButtonEyes);
         mButtonLips = findViewById(R.id.mButtonLips);
+        mButtonBack = findViewById(R.id.mButtonBack);
 
         mButtonHair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +40,13 @@ public class PickSymptonesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(v, LipsQ1Activity.class);
+            }
+        });
+
+        mButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(v, MainActivity.class);
             }
         });
     }

@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 public class HairQ3Activity extends AppCompatActivity {
 
-    private CheckBox mCheckBoxYes, mCheckBoxNo;
-    private Button mButtonNext;
+
+    private Button mButtonBack, mButtonYes, mButtonNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,38 +24,34 @@ public class HairQ3Activity extends AppCompatActivity {
 
         ArrayList<Boolean> HairAnswers = (ArrayList<Boolean>) getIntent().getSerializableExtra("StringKey");
 
-        mCheckBoxYes = findViewById(R.id.mCheckBoxYes);
-        mCheckBoxNo = findViewById(R.id.mCheckBoxNo);
-        mButtonNext = findViewById(R.id.mButtonNext);
+        mButtonBack = findViewById(R.id.mButtonBack);
+        mButtonYes = findViewById(R.id.mButtonYes);
+        mButtonNo = findViewById(R.id.mButtonNo);
 
-        mButtonNext.setOnClickListener(new View.OnClickListener() {
+
+        mButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(v, HairQ2Activity.class);
+            }
+        });
+
+        mButtonNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (mCheckBoxYes.isChecked() == true)
-                    HairAnswers.add(2,true);
-                else
-                    HairAnswers.add(2,false);
+                HairAnswers.add(2, false);
 
                 startActivity(v, HairQ4Activity.class, HairAnswers);
             }
         });
-
-        mCheckBoxYes.setOnClickListener(new View.OnClickListener() {
+        mButtonYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mCheckBoxNo.isChecked() == true) {
-                    mCheckBoxNo.setChecked(false);
-                }
-            }
-        });
 
-        mCheckBoxNo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mCheckBoxYes.isChecked() == true) {
-                    mCheckBoxYes.setChecked(false);
-                }
+                HairAnswers.add(2, true);
+
+                startActivity(v, HairQ4Activity.class, HairAnswers);
             }
         });
     }
@@ -63,6 +59,10 @@ public class HairQ3Activity extends AppCompatActivity {
     private void startActivity(View v, Class directed_class, ArrayList<Boolean> HairAnswers) {
         Intent intent = new Intent(this, directed_class);
         intent.putExtra("StringKey", HairAnswers);
+        startActivity(intent);
+    }
+    private void startActivity(View v, Class directed_class) {
+        Intent intent = new Intent(this, directed_class);
         startActivity(intent);
     }
 }

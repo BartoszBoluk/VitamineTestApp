@@ -8,14 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+import com.example.vitaminetestapp.PickSymptonesActivity;
 import com.example.vitaminetestapp.R;
 
 import java.util.ArrayList;
 
 public class EyeQ2Activity extends AppCompatActivity {
 
-    private CheckBox mCheckBoxYes, mCheckBoxNo;
-    private Button mButtonNext;
+    private Button mButtonBack, mButtonYes, mButtonNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,38 +24,34 @@ public class EyeQ2Activity extends AppCompatActivity {
 
         ArrayList<Boolean> eyeAnswers = (ArrayList<Boolean>) getIntent().getSerializableExtra("StringKey");
 
-        mCheckBoxYes = findViewById(R.id.mCheckBoxYes);
-        mCheckBoxNo = findViewById(R.id.mCheckBoxNo);
-        mButtonNext = findViewById(R.id.mButtonNext);
+        mButtonBack = findViewById(R.id.mButtonBack);
+        mButtonYes = findViewById(R.id.mButtonYes);
+        mButtonNo = findViewById(R.id.mButtonNo);
 
-        mButtonNext.setOnClickListener(new View.OnClickListener() {
+
+        mButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(v, EyeQ1Activity.class);
+            }
+        });
+
+        mButtonNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (mCheckBoxYes.isChecked() == true)
-                    eyeAnswers.add(1, true);
-                else
-                    eyeAnswers.add(1, false);
+                eyeAnswers.add(1, false);
 
                 startActivity(v, EyeResultActivity.class, eyeAnswers);
             }
         });
-
-        mCheckBoxYes.setOnClickListener(new View.OnClickListener() {
+        mButtonYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mCheckBoxNo.isChecked() == true) {
-                    mCheckBoxNo.setChecked(false);
-                }
-            }
-        });
 
-        mCheckBoxNo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mCheckBoxYes.isChecked() == true) {
-                    mCheckBoxYes.setChecked(false);
-                }
+                eyeAnswers.add(1, true);
+
+                startActivity(v, EyeResultActivity.class, eyeAnswers);
             }
         });
 
@@ -65,6 +61,10 @@ public class EyeQ2Activity extends AppCompatActivity {
     private void startActivity(View v, Class directed_class, ArrayList<Boolean> EyeAnswers) {
         Intent intent = new Intent(this, directed_class);
         intent.putExtra("StringKey", EyeAnswers);
+        startActivity(intent);
+    }
+    private void startActivity(View v, Class directed_class) {
+        Intent intent = new Intent(this, directed_class);
         startActivity(intent);
     }
 }

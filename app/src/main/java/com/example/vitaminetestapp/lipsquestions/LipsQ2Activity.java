@@ -9,13 +9,15 @@ import android.widget.Button;
 import android.widget.CheckBox;
 
 import com.example.vitaminetestapp.R;
+import com.example.vitaminetestapp.eyequestions.EyeQ1Activity;
+import com.example.vitaminetestapp.eyequestions.EyeResultActivity;
 
 import java.util.ArrayList;
 
 public class LipsQ2Activity extends AppCompatActivity {
 
-    private CheckBox mCheckBoxYes, mCheckBoxNo;
-    private Button mButtonNext;
+
+    private Button mButtonBack, mButtonYes, mButtonNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,38 +26,34 @@ public class LipsQ2Activity extends AppCompatActivity {
 
         ArrayList<Boolean> lipsAnswers = (ArrayList<Boolean>) getIntent().getSerializableExtra("StringKey");
 
-        mCheckBoxYes = findViewById(R.id.mCheckBoxYes);
-        mCheckBoxNo = findViewById(R.id.mCheckBoxNo);
-        mButtonNext = findViewById(R.id.mButtonNext);
+        mButtonBack = findViewById(R.id.mButtonBack);
+        mButtonYes = findViewById(R.id.mButtonYes);
+        mButtonNo = findViewById(R.id.mButtonNo);
 
-        mButtonNext.setOnClickListener(new View.OnClickListener() {
+
+        mButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(v, LipsQ1Activity.class);
+            }
+        });
+
+        mButtonNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (mCheckBoxYes.isChecked() == true)
-                    lipsAnswers.add(1, true);
-                else
-                    lipsAnswers.add(1, false);
+                lipsAnswers.add(1, false);
 
                 startActivity(v, LipsQ3Activity.class, lipsAnswers);
             }
         });
-
-        mCheckBoxYes.setOnClickListener(new View.OnClickListener() {
+        mButtonYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mCheckBoxNo.isChecked() == true) {
-                    mCheckBoxNo.setChecked(false);
-                }
-            }
-        });
 
-        mCheckBoxNo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mCheckBoxYes.isChecked() == true) {
-                    mCheckBoxYes.setChecked(false);
-                }
+                lipsAnswers.add(1, true);
+
+                startActivity(v, LipsQ3Activity.class, lipsAnswers);
             }
         });
 
@@ -65,6 +63,10 @@ public class LipsQ2Activity extends AppCompatActivity {
     private void startActivity(View v, Class directed_class, ArrayList<Boolean> lipsAnswers) {
         Intent intent = new Intent(this, directed_class);
         intent.putExtra("StringKey", lipsAnswers);
+        startActivity(intent);
+    }
+    private void startActivity(View v, Class directed_class) {
+        Intent intent = new Intent(this, directed_class);
         startActivity(intent);
     }
 }

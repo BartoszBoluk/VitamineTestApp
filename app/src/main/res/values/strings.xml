@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">VitamineTestApp</string>
-    <string name="Title">Aplikacja do diagnozy niedoboru witamin</string>
+    <string name="Title">Witamy w VitamineTestApp</string>
+    <string name="Subtitle">Aplikacji, która pomoże ci w zdiagnozowaniu niedoboru witamin! </string>
+    <string name="Subtitle2">Wystarczy udzielić odpowiedzi na kilka prostych pytań :) </string>
+    <string name="symptomesTitle">Wybierz opcję spośród dostępnych</string>
+    <string name="symptomesSubtitle">Na podstawie objawów dokonamy analizy, która pozwoli nam określić niedobór konkretnej witaminy</string>
     <string name="startButtontext">Start</string>
     <string name="buttonInfoText">Informacje</string>
-    <string name="TextViewInfo">Działanie aplikacji:\n1) Wybierz część ciała\n2) Odpowiedz na pytania\n3) Zobacz wynik</string>
+    <string name="TextViewInfo">Działanie aplikacji:\n\n1) Wybierz część ciała\n\n2) Odpowiedz na pytania\n\n3) Zobacz wynik </string>
+    <string name="TextViewInfoWhoDidThis">Aplikacja powstała dzięki ciężkiej pracy naszego niezawodnego zespołu w składzie:\n\n Oliwier Bryłka\n\n Maciej Grzegrzółka\n\n Albert Ceglarek \n\n Bartosz Boluk \n\n Natalia Gruntkowska</string>
     <string name="HairButtonText">Włosy</string>
     <string name="EyesButtonText">Oczy</string>
     <string name="LipsButtonText">Usta</string>
@@ -20,4 +25,5 @@
     <string name="LipsQ1Text">Czy pojawiają Ci się afty?</string>
     <string name="LipsQ2Text">Czy często masz nieświeży oddech?</string>
     <string name="LipsQ3Text">Czy masz pęknięcia w kącichach ust?</string>
+    <string name="BackText">Powrót</string>
 </resources>
