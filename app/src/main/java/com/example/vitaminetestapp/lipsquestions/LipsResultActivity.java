@@ -52,16 +52,16 @@ public class LipsResultActivity extends AppCompatActivity {
         String resultText = "";
 
         if (list.get(0).equals(false) && list.get(1).equals(false) && list.get(2).equals(false))
-            resultText = "Nie brakuje ci witamin";
+            resultText = "Nie brakuje Ci witamin";
         else if (list.get(0).equals(true) && list.get(1).equals(false))
-            resultText += "- Brakuje ci witamin A, B-complex i cynku.\n";
+            resultText += "- Brakuje Ci witamin A, B-complex i cynku.\n";
         else if (list.get(0).equals(false) && list.get(1).equals(true))
-            resultText += "- Brakuje ci witaminy B-complex.\n";
+            resultText += "- Brakuje Ci witaminy B-complex.\n";
         else if (list.get(0).equals(true) && list.get(1).equals(true))
-            resultText += "- Brakuje ci witamin A, B-complex i cynku.\n";
+            resultText += "- Brakuje Ci witamin A, B-complex i cynku.\n";
 
         if (list.get(2).equals(true))
-            resultText += "- Brakuje ci witamin B1, B2, B3\n";
+            resultText += "- Brakuje Ci witamin B1, B2, B3\n";
 
         mLipsResult.setText(resultText);
     }

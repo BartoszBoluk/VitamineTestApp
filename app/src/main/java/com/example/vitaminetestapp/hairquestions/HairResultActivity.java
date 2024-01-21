@@ -53,20 +53,20 @@ public class HairResultActivity extends AppCompatActivity {
 
         if (list.get(0).equals(false) && list.get(1).equals(false) && list.get(2).equals(false) &&
                 list.get(3).equals(false))
-            resultText = "Nie brakuje ci witamin";
+            resultText = "Nie brakuje Ci witamin";
         else if (list.get(0).equals(true) && list.get(1).equals(false))
-            resultText += "- Brakuje ci witaminy B \n";
+            resultText += "- Brakuje Ci witaminy B \n";
         else if (list.get(0).equals(false) && list.get(1).equals(true))
-            resultText += "- Brakuje ci witaminy B, białka i kwasów tłuszczowych \n";
+            resultText += "- Brakuje Ci witaminy B, białka i kwasów tłuszczowych \n";
         else if (list.get(0).equals(true) && list.get(1).equals(true))
-            resultText += "- Brakuje ci witaminy B, białka i kwasów tłuszczowych \n";
+            resultText += "- Brakuje Ci witaminy B, białka i kwasów tłuszczowych \n";
 
         if (list.get(2).equals(true) && list.get(3).equals(false))
-            resultText += "- Brakuje ci białka i cynku \n";
+            resultText += "- Brakuje Ci białka i cynku \n";
         else if (list.get(2).equals(false) && list.get(3).equals(true))
-            resultText += "- Brakuje ci białka \n";
+            resultText += "- Brakuje Ci białka \n";
         else if (list.get(2).equals(true) && list.get(3).equals(true))
-            resultText += "- Brakuje ci białka i cynku \n";
+            resultText += "- Brakuje Ci białka i cynku \n";
 
 
         mHairResult.setText(resultText);

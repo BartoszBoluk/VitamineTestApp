@@ -52,11 +52,11 @@ public class EyeResultActivity extends AppCompatActivity {
         String resultText = "";
 
         if (list.get(0).equals(false) && list.get(1).equals(false))
-            resultText = "Nie brakuje ci witamin";
+            resultText = "Nie brakuje Ci witamin";
         if (list.get(0).equals(true))
-            resultText += "- Brakuje ci witaminy B i K\n";
+            resultText += "- Brakuje Ci witaminy B i K\n";
         if (list.get(1).equals(true))
-            resultText += "- Brakuje ci witaminy A\n";
+            resultText += "- Brakuje Ci witaminy A\n";
 
         mEyeResult.setText(resultText);
     }

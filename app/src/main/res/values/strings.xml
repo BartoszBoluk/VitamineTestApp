@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">VitamineTestApp</string>
     <string name="Title">Witamy w VitamineTestApp</string>
-    <string name="Subtitle">Aplikacji, która pomoże ci w zdiagnozowaniu niedoboru witamin! </string>
+    <string name="Subtitle">Aplikacji, która pomoże Ci w zdiagnozowaniu niedoboru witamin! </string>
     <string name="Subtitle2">Wystarczy udzielić odpowiedzi na kilka prostych pytań :) </string>
     <string name="symptomesTitle">Wybierz opcję spośród dostępnych</string>
     <string name="symptomesSubtitle">Na podstawie objawów dokonamy analizy, która pozwoli nam określić niedobór konkretnej witaminy</string>
@@ -19,8 +19,8 @@
     <string name="emptyText">Test</string>
     <string name="eyeQ1Text">Czy masz podkrążone oczy?</string>
     <string name="eyeQ2Text">Czy masz suche oczy?</string>
-    <string name="HairQ2Text">Czy wypadają ci włosy?</string>
-    <string name="HairQ3Text">Czy masz włosy łamiace sie i wolno rosnące</string>
+    <string name="HairQ2Text">Czy wypadają Ci włosy?</string>
+    <string name="HairQ3Text">Czy masz włosy łamiące się i wolno rosnące?</string>
     <string name="HairQ4Text">Czy masz suche włosy?</string>
     <string name="LipsQ1Text">Czy pojawiają Ci się afty?</string>
     <string name="LipsQ2Text">Czy często masz nieświeży oddech?</string>
